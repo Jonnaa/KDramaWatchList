@@ -7,6 +7,10 @@ const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
 const methodOverride = require('method-override');
 
+/* Require the db connection, models, and seed data
+--------------------------------------------------------------- */
+const db = require('./models');
+
 
 /* Create the Express app
 --------------------------------------------------------------- */
