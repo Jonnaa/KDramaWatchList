@@ -11,6 +11,10 @@ const methodOverride = require('method-override');
 --------------------------------------------------------------- */
 const db = require('./models');
 
+/* Require the routes in the controllers folder
+--------------------------------------------------------------- */
+const reviewsCtrl = require('./controllers/reviews')
+
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -51,7 +55,10 @@ app.use(methodOverride('_method'));
 --------------------------------------------------------------- */
 // Home route
 app.get('/', function (req, res) {
-    res.send('hello')
+    db.Kdrama.find({})
+        .then(kdramas=>{
+            res.render('home',{kdramas:kdramas})
+        })
 });
 
 // Seed route
@@ -69,6 +76,10 @@ app.get('/seed', function (req, res) {
                 })
         })
 });
+
+// This tells our app to look at the `controllers/reviews.js` file 
+// to handle all routes that begin with `localhost:3000/reviews`
+app.use('/reviews', reviewsCtrl)
 
 
 /* Tell the app to listen on the specified port

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Dramas</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+
+    <main>
+        <h1>K-Dramas</h1>
+
+        <ul>
+            <% for(let kdrama of kdramas) {%>
+                    <li>
+                        <img src="<%= kdrama.poster %>" alt="">
+                        <h2><%= kdrama.title %></h2>
+                        <a href="./reviews/<%= kdrama.id %>"><button>View Reviews</button></a>
+                    </li>
+            <% } %>
+        </ul>
+    </main>
+    
+</body>
+</html>

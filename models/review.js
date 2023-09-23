@@ -7,6 +7,5 @@ const reviewSchema = new mongoose.Schema({
     rating: {type: Number, min:0, max:10,required: true}
 })
 
-
 // Export schema, but not as a mongoose model
 module.exports = reviewSchema
