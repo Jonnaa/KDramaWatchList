@@ -62,7 +62,21 @@ const kdramas = [
         rating: 8.4,
         genre: 'Crime Drama',
         seasons: 1,
-        episodes: 20
+        episodes: 20,
+        reviews:[
+            {
+                title: 'Pure Entertainment',
+                author: 'YPyaarCinemar',
+                content: 'Although the episodes are longer than normal Kdramas and one episode is 80+ mins, but the story was pretty comprehensive! Not draggy and fast paced, especially in the second half! It\'s all presented in a dark comedy kind of series, with a righteous leader, great amount of fighting scenes, a storyline of corruption and some witty yet hilarious plot throughout.',
+                rating: 9
+            },
+            {
+                title: 'You should judge after watching eps. 3 and 4',
+                author: 'ysmoon-87467',
+                content: 'Just finished watching the episode 4. Wow, it was so good. Well made mixture of thriller and comedy. I saw a few negative reviews here written after eps 1 or 2. I recommend watching at least up to eps 3 and 4. The real story starts from eps 3. Eps 4 is like a complete well made movie. You will surely enjoy it.',
+                rating: 9
+            }
+        ]
     },
     {
         title: 'Run On',
@@ -71,7 +85,21 @@ const kdramas = [
         rating: 7.4,
         genre: 'Romance',
         seasons: 1,
-        episodes: 16
+        episodes: 16,
+        reviews:[
+            {
+                title:'Perfect K-Drama - Oozing with Great Script, Lovely Actors, and Realness',
+                author: 'peterr-41048',
+                content: 'I am so in love with this show! I love the uniqueness of script, well written! Every time you watch an episode, you receive a heartfelt, sincere, warm, and romantic excitement as the story progresses. The chemistry between the 4 lead actors is overflowing, the OST\'s are wonderful. It\'s like a dreamy, lovely, relaxing, heart fluttering journey for us because the romance is there even without forcing it, they are charming. For me, it is a golden k-drama that is always worth rewatching.',
+                rating: 10
+            },
+            {
+                title: 'Watch it!',
+                author: 'thehopefully',
+                content: 'By far one of the best series I have ever seen. And I don\'t exaggerate. And for a start, it has a happy ending for everyone. I highly recommend watching this drama!',
+                rating: 9
+            }
+        ]
     }
 ]
 

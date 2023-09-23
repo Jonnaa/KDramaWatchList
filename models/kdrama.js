@@ -1,5 +1,6 @@
 // Require the Mongoose package
 const mongoose = require('mongoose');
+const reviewSchema = require('./review.js')
 
 const kdramaSchema = new mongoose.Schema({
     title: {type: String, required: true},
@@ -8,7 +9,8 @@ const kdramaSchema = new mongoose.Schema({
     rating: {type: Number, required: true, min:0, max:10},
     genre:{type: String, required: true},
     seasons: {type: Number, required: true},
-    episodes: {type: Number, required: true}
+    episodes: {type: Number, required: true},
+    reviews: [reviewSchema]
 })
 
 // Export schema as a mongoose model
