@@ -11,5 +11,6 @@ db.on('connected', function () {
 });
 
 module.exports = {
-    Kdrama: require('./kdrama')
+    Kdrama: require('./kdrama'),
+    seedKdramas : require('./seed')
 }
