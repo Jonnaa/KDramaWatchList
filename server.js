@@ -46,12 +46,30 @@ app.use(express.urlencoded({ extended: true }));
 // Allows us to interpret POST requests from the browser as another request type: DELETE, PUT, etc.
 app.use(methodOverride('_method'));
 
+
 /* Mount routes
 --------------------------------------------------------------- */
 // Home route
 app.get('/', function (req, res) {
     res.send('hello')
 });
+
+// Seed route
+// When a GET request is sent to `/seed`, the kdramas collection is seeded
+app.get('/seed', function (req, res) {
+    // Remove any existing kdramas
+    db.Kdrama.deleteMany({})
+        .then(removedKdramas => {
+            console.log(`Removed ${removedKdramas.deletedCount} kdramas`)
+            // Seed the kdramas collection with the seed data
+            db.Kdrama.insertMany(db.seedKdramas)
+                .then(addedKdramas => {
+                    console.log(`Added ${addedKdramas.length} kdramas`)
+                    res.json(addedKdramas)
+                })
+        })
+});
+
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
