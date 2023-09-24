@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+
+    <h1><%= review.title %></h1>
+    <h4>By: <%= review.author %></h4>
+    <p><%= review.content %></p>
+    <h3>Rating: <%= review.rating %>/10</h3>
+    <a href="#"><button>Edit</button></a>
+    <a href="#"><button>Delete</button></a>
+</body>
+</html>

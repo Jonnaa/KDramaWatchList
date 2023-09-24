@@ -24,7 +24,7 @@ const db = require('../models')
 // Index route(all reviews)
 router.get('/:kdramaId', (req,res)=>{
     db.Kdrama.findById({_id: req.params.kdramaId})
-        .then(kdrama => res.render('reviews',{kdrama:kdrama}))
+        .then(kdrama => res.render('./reviews/reviews',{kdrama:kdrama}))
 })
 
 // Show Route(specific review)
@@ -34,7 +34,7 @@ router.get('/:kdramaId/:reviewId', (req,res)=>{
         { 'reviews.$': true, _id: false }
     )
         .then(kdrama=>{
-            res.json(kdrama.reviews[0])
+            res.render('./reviews/review-details',{review: kdrama.reviews[0]})
         })
 })
 
