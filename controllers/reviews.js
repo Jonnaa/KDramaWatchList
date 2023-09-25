@@ -42,8 +42,12 @@ router.get('/:kdramaId/new', (req, res)=>{
 // the new route, creates a new review and redirects to
 // reviews of a specific drama
 router.post('/:kdramaId', (req, res)=>{
-    
-    res.send('you created a new review')
+    db.Kdrama.findByIdAndUpdate(
+        req.params.kdramaId,
+        {$push: {reviews: req.body}},
+        {new:true}
+    )
+        .then(kdrama=>res.redirect('/reviews/'+kdrama._id))
 })
 
 // Show Route(specific review)
