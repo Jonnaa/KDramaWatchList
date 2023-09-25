@@ -13,8 +13,13 @@
         <h4>By: <%= review.author %></h4>
         <p><%= review.content %></p>
         <h3>Rating: <%= review.rating %>/10</h3>
-        <a href="/reviews/<%= kdramaId %>/<%= review._id %>/edit"><button>Edit</button></a>
-        <a href="#"><button>Delete</button></a>
+        <div class="buttons">
+            <a href="/reviews/<%= kdramaId %>/<%= review._id %>/edit"><button>Edit</button></a>
+            <form method="POST" action="/reviews/<%= kdramaId %>/<%= review._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+        </div>
+        
     </main>
     
 </body>

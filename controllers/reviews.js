@@ -30,7 +30,6 @@ router.get('/:kdramaId', (req,res)=>{
 // new route, renders new-form.ejs
 // which creates(POST) a new review is submit is clicked
 router.get('/:kdramaId/new', (req, res)=>{
-    console.log('you\'re here')
     db.Kdrama.findById(req.params.kdramaId)
         .then(kdrama=>{
             res.render('./reviews/new-review',{kdrama:kdrama})
@@ -56,13 +55,22 @@ router.get('/:kdramaId/:reviewId', (req,res)=>{
         { 'reviews._id': req.params.reviewId },
         { 'reviews.$': true, _id: false }
     )
-        .then(kdrama=>{
-            res.render('./reviews/review-details',
-            {
-                kdramaId: req.params.kdramaId,
-                review: kdrama.reviews[0]
-            })
+        .then(reviews=>{
+            if(reviews.reviews[0]!==null){
+                res.render('./reviews/review-details',
+                {
+                    kdramaId: req.params.kdramaId,
+                    review: reviews.reviews[0]
+                })
+            }
+            else{
+                res.render('./reviews/review-details',
+                {
+                    kdramaId: req.params.kdramaId
+                })
+            }
         })
+        .catch(err=>console.log(err))
 })
 
 
@@ -97,9 +105,16 @@ router.put('/:kdramaId/:reviewId/', (req, res)=>{
 })
 
 // Delete Route
-router.delete('/review/:id',(req,res)=>{
-    db.findById(req.params.id)
-        .then((review)=> res.json(review))
+router.delete('/:kdramaId/:reviewId',(req,res)=>{
+    db.Kdrama.findOneAndUpdate(
+        {'reviews._id':req.params.reviewId},
+        {$pull: {reviews:{_id:req.params.reviewId}}},
+        {new: true}
+    )
+        .then(kdrama=> {
+            res.redirect('/reviews/'+kdrama._id)
+        })
+        .catch(err=>console.log(err))
 })
 
 
