@@ -63,6 +63,33 @@ app.get('/', function (req, res) {
         })
 });
 
+//WatchList Route
+app.get('/watchlist/:kdramaId',function(req,res){
+    db.Kdrama.findByIdAndUpdate(
+        req.params.kdramaId,
+        {addedToList: true}
+    )
+    .then(kdrama=>{
+        console.log('Added 1 kdrama to my list')
+    })
+    .catch(err=>console.log(err))
+})
+
+// //WatchList Route
+// app.get('/watchlist/:kdramaId',function(req,res){
+//     db.Kdrama.findByIdAndUpdate(
+//         req.params.kdramaId,
+//         {addedToList: {
+//             $cond: [{$eq: true}, false, true]
+//         }}
+//     )
+//     .then(kdrama=>{
+//         console.log(kdrama.addedToList)
+//     })
+//     .catch(err=>console.log(err))
+// })
+
+
 // Seed route
 // When a GET request is sent to `/seed`, the kdramas collection is seeded
 app.get('/seed', function (req, res) {

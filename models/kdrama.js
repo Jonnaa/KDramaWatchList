@@ -10,7 +10,8 @@ const kdramaSchema = new mongoose.Schema({
     genre:{type: String, required: true},
     seasons: {type: Number, required: true},
     episodes: {type: Number, required: true},
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    addedToList: {type: Boolean, default: false}
 })
 
 // Export schema as a mongoose model
