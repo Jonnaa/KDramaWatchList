@@ -16,7 +16,8 @@
                     <li>
                         <img src="<%= kdrama.poster %>" alt="">
                         <h2><%= kdrama.title %></h2>
-                        <a href="/reviews/<%= kdrama.id %>"><button>View Reviews</button></a>
+                        <a href="/reviews/<%= kdrama._id %>"><button>View Reviews</button></a>
+                        <a href="/watchList/<%= kdrama._id %>"><button>Add To List</button></a>
                     </li>
             <% } %>
         </ul>

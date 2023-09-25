@@ -8,8 +8,9 @@
 <body>
     <%- include('../partials/nav') %>
 
-    <h1>Reviews for <%= kdrama.title %></h1>
-    <ul class="kdramaReviews">
+    <main>
+        <h1>Reviews for <%= kdrama.title %></h1>
+        <ul class="kdramaReviews">
         <% for(let review of kdrama.reviews) {%>
                 <li>
                     <h3><%= review.title %></h3>
@@ -17,7 +18,9 @@
                     <a href="/reviews/<%= kdrama.id %>/<%= review._id %>"><button>Learn More</button></a>
                 </li>
             <% } %>
-    </ul>
+        </ul>
+    </main>
+    
     
 
 </body>
