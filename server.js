@@ -37,6 +37,8 @@ liveReloadServer.server.once("connection", () => {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+
+
 /* Middleware (app.use)
 --------------------------------------------------------------- */
 app.use(express.static('public'))

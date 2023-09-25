@@ -72,12 +72,16 @@ router.get('/:kdramaId/:reviewId/edit', (req, res)=>{
 
 // Update Route 
 router.put('/:kdramaId/:reviewId/', (req, res)=>{
-    db.Kdrama.findByIdAndUpdate(
-        req.params.reviewId,
-        req.body,
+    req.body._id=req.params.reviewId
+    db.Kdrama.findOneAndUpdate(
+        {'reviews._id': req.params.reviewId},
+        {$set: {'reviews.$':req.body}},
         {new:true}
         )
-            .then(review=> res.json(review))
+            .then(review=> {
+                res.redirect(`/reviews/${req.params.kdramaId}/${req.params.reviewId}`)
+            })
+
 })
 
 // Delete Route
