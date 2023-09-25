@@ -63,14 +63,20 @@ app.get('/', function (req, res) {
         })
 });
 
-//WatchList Route
+// watchlist route
+app.get('/watchlist',function(req,res){
+    db.Kdrama.find({addedToList:true})
+        .then(kdramas=> res.json(kdramas))
+})
+
+// add to watchlist route
 app.get('/watchlist/:kdramaId',function(req,res){
     db.Kdrama.findByIdAndUpdate(
         req.params.kdramaId,
         {addedToList: true}
     )
     .then(kdrama=>{
-        console.log('Added 1 kdrama to my list')
+        res.redirect('/')
     })
     .catch(err=>console.log(err))
 })
