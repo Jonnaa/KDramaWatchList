@@ -8,15 +8,16 @@
     <%- include('./partials/nav') %>
 
     <main>
-        <h1>K-Dramas</h1>
 
         <ul>
             <% for(let kdrama of kdramas) {%>
                     <li>
                         <img src="<%= kdrama.poster %>" alt="">
                         <h2><%= kdrama.title %></h2>
-                        <a href="/reviews/<%= kdrama._id %>"><button>View Reviews</button></a>
-                        <a href="/watchList/<%= kdrama._id %>"><button>Add To List</button></a>
+                        <div class="btns">
+                            <a href="/reviews/<%= kdrama._id %>"><button>View Reviews</button></a>
+                            <a href="/watchList/<%= kdrama._id %>"><button>Add To List</button></a>
+                        </div>
                     </li>
             <% } %>
         </ul>
