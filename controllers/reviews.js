@@ -27,6 +27,25 @@ router.get('/:kdramaId', (req,res)=>{
         .then(kdrama => res.render('./reviews/reviews',{kdrama:kdrama}))
 })
 
+// new route, renders new-form.ejs
+// which creates(POST) a new review is submit is clicked
+router.get('/:kdramaId/new', (req, res)=>{
+    console.log('you\'re here')
+    db.Kdrama.findById(req.params.kdramaId)
+        .then(kdrama=>{
+            res.render('./reviews/new-review',{kdrama:kdrama})
+        })
+    
+})
+
+// create route, receives a POST request sent from
+// the new route, creates a new review and redirects to
+// reviews of a specific drama
+router.post('/:kdramaId', (req, res)=>{
+    
+    res.send('you created a new review')
+})
+
 // Show Route(specific review)
 router.get('/:kdramaId/:reviewId', (req,res)=>{
     db.Kdrama.findOne(
@@ -42,18 +61,7 @@ router.get('/:kdramaId/:reviewId', (req,res)=>{
         })
 })
 
-// new route, renders new-form.ejs
-// which creates(POST) a new review is submit is clicked
-router.get('/:kdramaId/new', (req, res)=>{
-    res.send('you\re creating a new review')
-})
 
-// create route, receives a POST request sent from
-// the new route, creates a new review and redirects to
-// reviews of a specific drama
-router.post('/:kdramaId', (req, res)=>{
-    res.send('you created a new review')
-})
 
 // Edit Route(edit 1 review)
 router.get('/:kdramaId/:reviewId/edit', (req, res)=>{

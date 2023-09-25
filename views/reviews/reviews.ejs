@@ -8,12 +8,13 @@
 
     <main>
         <h1>Reviews for <%= kdrama.title %></h1>
+        <a href="/reviews/<%= kdrama._id %>/new"><button>Create A Review</button></a>
         <ul class="kdramaReviews">
         <% for(let review of kdrama.reviews) {%>
                 <li>
                     <h3><%= review.title %></h3>
                     <h5>Rating: <%= review.rating %>/10</h5>
-                    <a href="/reviews/<%= kdrama.id %>/<%= review._id %>"><button>Learn More</button></a>
+                    <a href="/reviews/<%= kdrama._id %>/<%= review._id %>"><button>Learn More</button></a>
                 </li>
             <% } %>
         </ul>

@@ -8,7 +8,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgb(0, 3, 88),rgb(0, 0, 0));
+    /* background: linear-gradient(rgb(0, 3, 88),rgb(0, 0, 0)); */
 }
 nav{
     display: flex;
