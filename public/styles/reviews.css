@@ -51,9 +51,22 @@ section{
 }
 li{
     list-style-type: none;
+    padding: 10px 0;
 }
+li:first-of-type{
+    padding-top: 20px;
+}
+li>p{
+    padding-bottom: 5px;
+}
+.reviewFooter{
+    display: flex;
+    justify-content: space-between;
+}
+
 .line{
     border-bottom: 2.5px solid rgb(108, 108, 108);
     border-radius: 3px;
-    margin: 10px 0 0;
+    margin: 10px auto 0;
+    width: 80%;
 }

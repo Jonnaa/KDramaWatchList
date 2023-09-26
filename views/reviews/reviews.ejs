@@ -37,8 +37,11 @@
             <% for(let review of kdrama.reviews) {%>
                 <li>
                     <p><%= review.title %></p>
-                    <p>Rating: <%= review.rating %>/10</p>
-                    <a href="/reviews/<%= kdrama._id %>/<%= review._id %>"><button>Learn More</button></a>
+                    <div class="reviewFooter">
+                        <p>Rating: <%= review.rating %>/10</p>
+                        <a href="/reviews/<%= kdrama._id %>/<%= review._id %>"><button>Review Details</button></a>
+                    </div>
+                    
                 </li>
             <% } %>
         </ul>

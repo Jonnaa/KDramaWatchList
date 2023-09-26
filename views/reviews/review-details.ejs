@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
     <%- include('../partials/head',{title:'Review'}) %>
+    <link rel="stylesheet" href="/styles/review-details.css">
 </head>
 <body>
     <%- include('../partials/nav') %>
 
     <main>
-        <h1><%= review.title %></h1>
-        <h4>By: <%= review.author %></h4>
-        <p><%= review.content %></p>
-        <h3>Rating: <%= review.rating %>/10</h3>
-        <div class="buttons">
-            <a href="/reviews/<%= kdramaId %>/<%= review._id %>/edit"><button>Edit</button></a>
-            <form method="POST" action="/reviews/<%= kdramaId %>/<%= review._id %>?_method=DELETE">
+        <section>
+            <h1><%= review.title %></h1>
+            <p class="author">By: <%= review.author %></p>
+            <p><%= review.content %></p>
+            <p>Rating: <%= review.rating %>/10</p>
+            <div class="buttons">
+                <a href="/reviews/<%= kdramaId %>/<%= review._id %>/edit"><button>Edit</button></a>
+                <form method="POST" action="/reviews/<%= kdramaId %>/<%= review._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />
             </form>
         </div>
+        </section>
+        
         
     </main>
     

@@ -15,7 +15,7 @@ li{
     color: white;
     display: flex;
     flex-direction: column;
-    border: 3px solid black;
+    border: 1.75px solid black;
     position: relative;
     border-radius: 10px;
 }
@@ -23,8 +23,8 @@ li>img{
     width: 100%;
     height: 78%;
     min-height: 78%;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
 }
 /* K-Drama Title */
 li>h2{
@@ -58,11 +58,19 @@ button{
     li>h2{
         font-size: 25px;
     }
+    button{
+        font-size: 15px;
+        width: 105px;
+    }
 }
 @media only screen and (min-width:630px) {
     li>h2{
         padding-top: 20px;
         font-size: 29px;
+    }
+    button{
+        font-size: 17px;
+        width: 115px;
     }
 }
 
@@ -73,6 +81,10 @@ button{
     li>h2{
         padding-top: 5px;
         font-size: 24px;
+    }
+    button{
+        font-size: 14px;
+        width: 92px;
     }
 }
 @media only screen and (min-width:1024px) {
