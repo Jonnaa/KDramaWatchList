@@ -104,6 +104,8 @@ li>p{
         align-items: center;
         gap: 10px;
         padding: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
     }
     img{
         width: 40%;
@@ -111,5 +113,9 @@ li>p{
     }
     figcaption{
         width: 50%;
+    }
+    section{
+        max-width: 900px;
+        margin: 0 auto;
     }
 }
