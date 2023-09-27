@@ -5,6 +5,7 @@ figure{
 }
 img{
     width: 50%;
+    max-width: 300px;
     display: block;
     margin: 0 auto;
 }
@@ -67,6 +68,48 @@ li>p{
 .line{
     border-bottom: 2.5px solid rgb(108, 108, 108);
     border-radius: 3px;
-    margin: 10px auto 0;
-    width: 80%;
+    margin: 10px auto;
+    width: 70%;
+}
+
+@media only screen and (min-width:768px){
+    h2{
+        font-size: 32px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .episodes>p{
+        font-size: 20px;
+    }
+    button{
+        width: 130px;
+        font-size: 16px;
+    }
+    figcaption{
+        width: 60%;
+    }
+    section{
+        width: 60%;
+    }
+}
+
+
+@media only screen and (min-width:1024px){
+    figure{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 30px;
+    }
+    img{
+        width: 40%;
+        max-width: 40%;
+    }
+    figcaption{
+        width: 50%;
+    }
 }

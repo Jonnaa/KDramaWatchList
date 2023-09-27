@@ -11,9 +11,10 @@
         <section>
             <h1><%= review.title %></h1>
             <p class="author">By: <%= review.author %></p>
-            <p><%= review.content %></p>
-            <p>Rating: <%= review.rating %>/10</p>
+            <div class="line"></div>
+            <p class="content"><%= review.content %></p>
             <div class="buttons">
+                <p>Rating: <%= review.rating %>/10</p>
                 <a href="/reviews/<%= kdramaId %>/<%= review._id %>/edit"><button>Edit</button></a>
                 <form method="POST" action="/reviews/<%= kdramaId %>/<%= review._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />

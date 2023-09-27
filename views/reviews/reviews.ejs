@@ -15,20 +15,21 @@
                 <div class="line"></div>
                 <h2><%= kdrama.title %></h2>
                 <div class="figHead">
-                    <h5>Genre: <%= kdrama.genre %></h5>
-                    <h5>Rating: <%= kdrama.rating %></h5>
+                    <p>Genre: <%= kdrama.genre %></p>
+                    <p>Rating: <%= kdrama.rating %></p>
                 </div>
                 <div class="episodes">
                     <p>Seasons: <%= kdrama.seasons %></p>
                     <p>Episodes: <%= kdrama.episodes %></p>
                 </div>
                 <p class="synopsis">Synopsis: <br><%= kdrama.synopsis %></p>
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
             </figcaption>
         </figure>
 
         <!-- reviews -->
         <section>
+            <div class="line"></div>
             <div class="sectionHead">
                 <h2>Reviews</h2>
                 <a href="/reviews/<%= kdrama._id %>/new"><button>Create A Review</button></a>
