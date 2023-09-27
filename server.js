@@ -57,7 +57,7 @@ app.use(methodOverride('_method'));
 --------------------------------------------------------------- */
 // Home route
 app.get('/', function (req, res) {
-    db.Kdrama.find({})
+    db.Kdrama.find({}).sort({title:1})
         .then(kdramas=>{
             res.render('home',{kdramas:kdramas})
         })
@@ -65,8 +65,10 @@ app.get('/', function (req, res) {
 
 // watchlist route
 app.get('/watchlist',function(req,res){
-    db.Kdrama.find({addedToList:true})
-        .then(kdramas=> res.json(kdramas))
+    db.Kdrama.find({addedToList:true}).sort({title:1})
+        .then(kdramas=> {
+            res.render('watchlist',{kdramas:kdramas})
+        })
 })
 
 // add to watchlist route

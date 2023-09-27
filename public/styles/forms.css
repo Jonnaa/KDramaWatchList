@@ -1,0 +1,12 @@
+form{
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns:1fr;
+}
+input, textarea{
+    margin: 5px 0 10px;
+}
+textarea{
+    height: 50px;
+}

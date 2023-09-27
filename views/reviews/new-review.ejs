@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head',{title:'Creating Review'}) %>
+    <link rel="stylesheet" href="/styles/forms.css">
 </head>
 <body>
     <%- include('../partials/nav') %>
@@ -10,33 +11,38 @@
         <form method="POST" action="/reviews/<%= kdrama._id %>">
             <!-- title input -->
             <label for="title">Title: </label>
-            <input type="text" id="title" name="title" required><br>
+            <input type="text" id="title" name="title" required>
 
             <!-- author input -->
             <label for="author">Author: </label>
-            <input type="text" id="author" name="author" required><br>
+            <input type="text" id="author" name="author" required>
 
             <!-- content input -->
             <label for="content">Content: </label>
-            <textarea name="content" id="content" required></textarea><br>
+            <textarea name="content" id="content" required></textarea>
 
             <!-- rating input -->
-            <label for="rating">Rating: </label>
-            <select name="rating" id="rating">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select><br>
+            <div class="ratingDiv">
 
-            <input type="submit" value="Post Review">
+                <label for="rating">Rating: </label>
+
+                <select name="rating" id="rating">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <input type="submit" value="Post Review" class="submitButton">
+            </div>
+            
         </form>
     </main>
 </body>
