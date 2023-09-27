@@ -107,7 +107,7 @@ li>p{
     }
     img{
         width: 40%;
-        max-width: 40%;
+        max-width: 500px;
     }
     figcaption{
         width: 50%;
