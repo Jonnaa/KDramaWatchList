@@ -2,8 +2,25 @@
 <html lang="en">
 <head>
     <%- include('./partials/head',{title:'My Watch List'}) %>
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 <body>
-    
+    <%- include('./partials/nav') %>
+
+    <main>
+
+        <ul>
+            <% for(let kdrama of kdramas) {%>
+                    <li>
+                        <img src="<%= kdrama.poster %>" alt="">
+                        <h2><%= kdrama.title %></h2>
+                        <div class="btns">
+                            <a href="/reviews/<%= kdrama._id %>"><button>View Reviews</button></a>
+                            <a href="/watchlist/<%= kdrama._id %>"><button>Add To List</button></a>
+                        </div>
+                    </li>
+            <% } %>
+        </ul>
+    </main>
 </body>
 </html>

@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
 
 // watchlist route
 app.get('/watchlist',function(req,res){
-    db.Kdrama.find({addedToList:true}).sort({title:1})
+    db.Kdrama.find({addedToList:true})
         .then(kdramas=> {
             res.render('watchlist',{kdramas:kdramas})
         })
