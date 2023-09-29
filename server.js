@@ -21,17 +21,6 @@ const reviewsCtrl = require('./controllers/reviews')
 const app = express();
 
 
-/* Configure the app to refresh the browser when nodemon restarts
---------------------------------------------------------------- */
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
-    // wait for nodemon to fully restart before refreshing the page
-    setTimeout(() => {
-        liveReloadServer.refresh("/");
-    }, 100);
-});
-
-
 /* Configure the app (app.set)
 --------------------------------------------------------------- */
 app.set('view engine', 'ejs');
