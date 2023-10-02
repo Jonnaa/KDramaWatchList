@@ -17,7 +17,7 @@
                         <div class="btns">
                             <a href="/reviews/<%= kdrama._id %>"><button>View Reviews</button></a>
                             <% if(kdrama.addedToList) {%>
-                                <a href="/watchlist/<%= kdrama._id %>"><button>In List</button></a>
+                                <a href="/watchlist/<%= kdrama._id %>"><button class="btnInList">In List</button></a>
                                 <% } else{%>
                                 <a href="/watchlist/<%= kdrama._id %>"><button>Add To List</button></a>
                                 <% } %>

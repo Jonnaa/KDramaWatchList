@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
 }
 
 body{
@@ -15,18 +16,12 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(rgba(182, 103, 255, 0.473),rgb(192, 192, 192));
+    background: linear-gradient(rgba(182, 103, 255, 0.39),rgb(192, 192, 192));
     height: 30px;
     padding:2px 15px;
     position: relative;
+    transition: all 1s;
 }
-nav>p{
-    color: rgb(100, 0, 194);
-    font-size: 23px;
-    letter-spacing: 1.2px;
-    display: inline-block;
-    width: 110px;
- }
 nav>a{
     text-decoration: none;
     font-size: 23px;
@@ -36,14 +31,25 @@ nav>a{
     text-align: center;
     transition: all 1s;
 }
-nav>a:last-of-type{
-    text-align: right;
-}
+.navP{
+    color: rgb(100, 0, 194);
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    transition: all 1s;
+ }
 nav>a:hover{
     background-color: blueviolet;
     color: white;
     border-radius: 10px;
     padding: 0 5px;
+}
+.navP:hover{
+    color: white;
+    padding: 0;
 }
 main{
     flex: auto;
@@ -52,12 +58,28 @@ main{
     /* background: linear-gradient(rgb(195, 195, 195),rgb(252, 188, 188)); */
 }
 
+button{
+    border-radius: 5px;
+    border: 1px solid pink;
+    width: 140px;
+    font-size: 18px;
+    background-color: rgb(241, 229, 172);
+    color: rgb(70, 68, 66);
+    padding: 3px;
+    transition: all .5s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(253, 195, 255);
+    color: rgb(100, 0, 194);
+}
 
-@media only screen and (min-width:250px) and (max-width:425px){
+
+@media only screen and (min-width:200px) and (max-width:425px){
     nav{
         height: 20px;
     }
-    nav>p{
+    .navP{
         font-size: 18px;
         width: 100px;
     }
@@ -71,7 +93,7 @@ main{
     nav{
         height: 40px;
     }
-    nav>p{
+    .navP{
         font-size: 27px;
         width: 140px;
     }
