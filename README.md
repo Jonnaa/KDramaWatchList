@@ -68,3 +68,7 @@ Steps:
 The only problem I had was constantly finding new things to style and/or change.  
 This project really solidified my understanding of CSS, I now understand what I need to do in order to get an element in a certain position.  
 CSS Flex was a lifesaver when it came to displaying cards, but I really need to research CSS Grid more.
+
+## Resources
+For the K-Drama pictures(posters): https://www.themoviedb.org/?language=en-US
+For Synopses: https://www.wikipedia.org
