@@ -1,12 +1,21 @@
-# Jonathan Navarro - Project 2
+# Jonathan Navarro - KDramas Watchlist
 Hello, thank you for checking out my project.  
 This is a fullstack application, a MEN-Stack CRUD app to be specific.  
 The app was made to display a list of K-dramas. You can add specific K-dramas to your watchlist.  
-You can also view reviews, which shows the k-drama details and reviews for selected drama.  
+You can also view reviews, which show the k-drama details and reviews for the selected drama.  
 You can edit, create, or delete reviews.
 
 ## App Screenshots
-
+### Home Page
+![Home Page](<public/assets/AppScreenshots/Home Page.jpg>)
+### Reviews Index
+![Reviews Index Page](public/assets/AppScreenshots/Reviews.jpg)
+### Review Details
+![Review Details Page](<public/assets/AppScreenshots/Review Details.jpg>)
+### Edit Review Page(Create Review Page Is Similar)
+![Edit & Create Form Page](<public/assets/AppScreenshots/Edit Review Page.jpg>)
+### Watchlist Page
+![Watchlist Page](<public/assets/AppScreenshots/Watchlist Page.jpg>)
 ## List of Technologies used
 - MongoDB/Mongoose
 - Express
@@ -56,3 +65,6 @@ Steps:
 ![Route Table](<public/assets/Screenshots/Updated Route Table.jpg>)
 
 ## Unsolved Problems & Major Hurdles
+The only problem I had was constantly finding new things to style and/or change.  
+This project really solidified my understanding of CSS, I now understand what I need to do in order to get an element in a certain position.  
+CSS Flex was a lifesaver when it came to displaying cards, but I really need to research CSS Grid more.
