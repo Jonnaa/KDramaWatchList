@@ -58,20 +58,20 @@ main{
     /* background: linear-gradient(rgb(195, 195, 195),rgb(252, 188, 188)); */
 }
 
-button{
+button, .globalBtn{
     border-radius: 5px;
-    border: 1px solid pink;
+    border: 1px solid rgb(185, 149, 252);
     width: 140px;
     font-size: 18px;
     background-color: rgb(241, 229, 172);
-    color: rgb(70, 68, 66);
+    color: rgb(97, 1, 92);
     padding: 3px;
-    transition: all .5s;
+    transition: all 1s;
     cursor: pointer;
 }
-button:hover{
-    background-color: rgb(253, 195, 255);
-    color: rgb(100, 0, 194);
+button:hover, .globalBtn:hover{
+    background-color: rgb(97, 1, 92);
+    color: rgb(219, 219, 219);
 }
 
 

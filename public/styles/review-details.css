@@ -17,7 +17,7 @@ h1{
 .line{
     border-bottom: 3px solid gray;
     width: 70%;
-    margin: 0 auto 10px;
+    margin: 10px auto 30px;
 }
 .content{
     font-size: 18px;
@@ -26,7 +26,7 @@ h1{
 .buttons{
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .buttons>p{
     font-weight: 600;
@@ -34,6 +34,10 @@ h1{
 button, .btn{
     width: 60px;
     font-size: 15px;
+}
+.globalBtn{
+    background-color: rgb(250, 59, 59);
+    color: aliceblue;
 }
 
 @media only screen and (min-width:768px){
@@ -51,7 +55,10 @@ button, .btn{
         font-size:20px;
     }
     .line{
-        margin: 20px auto;
+        margin: 20px auto 40px;
+    }
+    .buttons{
+    padding-top: 30px;
     }
     .buttons>p{
         font-size: 18px;
@@ -77,8 +84,11 @@ button, .btn{
         font-size:22px;
     }
     .line{
-        margin: 20px auto 40px;
+        margin: 20px auto 60px;
     }
+    .buttons{
+        padding-top: 50px;
+        }
     .buttons>p{
         font-size: 20px;
     }

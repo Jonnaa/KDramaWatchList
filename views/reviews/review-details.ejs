@@ -17,7 +17,7 @@
                 <p>Rating: <%= review.rating %>/10</p>
                 <a href="/reviews/<%= kdramaId %>/<%= review._id %>/edit"><button>Edit</button></a>
                 <form method="POST" action="/reviews/<%= kdramaId %>/<%= review._id %>?_method=DELETE">
-                <input class="btn" type="submit" value="Delete" />
+                <input class="btn globalBtn" type="submit" value="Delete" />
             </form>
         </div>
         </section>
