@@ -100,7 +100,44 @@ const kdramas = [
                 rating: 9
             }
         ]
+    },
+    {
+        title: 'Narco-Saints',
+        poster: 'https://www.themoviedb.org/t/p/original/8ivM3YptVuFgumcZMjCMi28k2EF.jpg',
+        synopsis: 'The life-threatening journey of Kang In-gu (Ha Jung-woo), a civilian businessman who has no choice but to cooperate with the secret operation of the National Intelligence Service to catch Jeon Yo-hwan (Hwang Jung-min), a South Korean drug lord who has taken control of Suriname.',
+        rating: 7.3,
+        genre: 'Thriller',
+        seasons: 1,
+        episodes: 6
+    },
+    {
+        title: 'Extraordinary Attorney Woo',
+        poster: 'https://www.themoviedb.org/t/p/original/zuNOQVI4rEaqwknrfQUVKtlKE2C.jpg',
+        synopsis: 'Extraordinary Attorney Woo tells the story of Woo Young-woo, an autistic lawyer who is raised by her single father. She grows up with one friend at school, Dong Geu-ra-mi, an oddball girl who protects her from school bullies. She graduates at the top of her law school class at Seoul National University. Because she\'s autistic, no one will hire her. However, through a connection of her father\'s, she obtains her first job at Hanbada, a large Seoul law firm. Attorney Woo\'s intelligence and photographic memory help her to become an excellent lawyer, as she is able to recall laws and everything she reads, sees, or hears perfectly.',
+        rating: 8.6,
+        genre: 'Legal Drama',
+        seasons: 1,
+        episodes: 16
+    },
+    {
+        title: 'Hospital Playlist',
+        poster: 'https://www.themoviedb.org/t/p/original/pCTWzOIYVM92gXc52o9mVYESAfF.jpg',
+        synopsis: 'Every day is extraordinary for five doctors and their patients inside a hospital, where birth, death and everything in between coexist.',
+        rating: 8.8,
+        genre: 'Medical Drama',
+        seasons: 2,
+        episodes: 24
+    },
+    {
+        title: 'Bloodhounds',
+        poster: 'https://www.themoviedb.org/t/p/original/kxU1hhebWZGaz8gkMVi8zkZhzVt.jpg',
+        synopsis: 'Bloodhounds depicts a story about two young boxers who set foot in the world of private loans in pursuit of money and get caught up in a huge force.',
+        rating: 8.1,
+        genre: 'Crime',
+        seasons: 1,
+        episodes: 8
     }
+    
 ]
 
 // Export the seed data to `models/index.js`
